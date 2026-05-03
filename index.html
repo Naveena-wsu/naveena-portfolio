@@ -7,6 +7,7 @@
 <title>Naveena Punugupati | Portfolio</title>
 
 <style>
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -36,16 +37,12 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #2563eb;
-}
-
 /* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 0;
+  padding: 60px 0;
 }
 
 .hero-text {
@@ -53,14 +50,13 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 48px;
   margin-bottom: 10px;
-  color: #111827;
 }
 
 .hero h3 {
   color: #2563eb;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .hero p {
@@ -68,24 +64,21 @@ nav a:hover {
 }
 
 .hero img {
-  width: 260px;
-  height: 260px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #2563eb;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 /* SECTION */
 section {
-  padding: 60px 0;
+  padding: 50px 0;
   border-top: 1px solid #e5e7eb;
 }
 
 h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #111827;
+  margin-bottom: 20px;
 }
 
 /* LIST */
@@ -102,19 +95,10 @@ li {
   display: inline-block;
   background: #dbeafe;
   color: #1e40af;
-  padding: 6px 12px;
+  padding: 5px 10px;
   margin: 5px;
   border-radius: 15px;
   font-size: 14px;
-  font-weight: bold;
-}
-
-/* HIGHLIGHT BOX */
-.highlight-box {
-  background: #f8fbff;
-  border-left: 4px solid #2563eb;
-  padding: 20px;
-  border-radius: 8px;
 }
 
 /* CONTACT */
@@ -122,32 +106,6 @@ li {
   margin: 8px 0;
 }
 
-.contact a {
-  color: #2563eb;
-  font-weight: bold;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  nav {
-    display: block;
-    text-align: center;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 8px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero img {
-    margin-top: 30px;
-  }
-}
 </style>
 </head>
 
@@ -160,7 +118,6 @@ li {
   <div></div>
   <div>
     <a href="#about">About</a>
-    <a href="#highlights">Highlights</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
@@ -177,10 +134,6 @@ li {
 
     <h3>Site Reliability Engineer / DevOps Engineer</h3>
 
-    <p style="font-weight:600; color:#2563eb;">
-      Focused on Reliability • Automation • Scalable Systems
-    </p>
-
     <p>
       AWS | Azure | Kubernetes | Terraform | CI/CD | Observability
     </p>
@@ -188,13 +141,12 @@ li {
     <br>
 
     <p>
-      I build and maintain reliable cloud systems with a strong focus on automation,
-      scalability, and production stability across AWS, Azure, and Kubernetes environments.
+      Most of my work has been around keeping systems stable in production — fixing issues when things break, improving monitoring, and making deployments smoother. I’ve worked with AWS, Kubernetes, and CI/CD pipelines, and over time I got used to digging into logs, alerts, and system behavior to understand what’s actually going wrong instead of just patching it temporarily.
     </p>
   </div>
 
   <div>
-    <img src="naveena.jpg" alt="Naveena Photo">
+    <img src="naveena.jpg" alt="My Photo">
 
     <p style="text-align:center; margin-top:10px; font-weight:600;">
       SRE | DevOps Engineer
@@ -210,60 +162,52 @@ li {
 <section id="about">
 <h2>About Me</h2>
 
-<div class="highlight-box">
 <p>
-I am a Site Reliability Engineer and DevOps professional with hands-on experience in cloud infrastructure, Kubernetes, CI/CD pipelines, monitoring, and production support.
+I didn’t start by building perfect systems — most of my learning came from things breaking in real environments. Early on, I used to struggle understanding logs, alerts, and deployment failures, but over time I got comfortable debugging issues and figuring out what’s actually happening inside the system.
 </p>
 
 <p>
-I have worked on real production issues like alert noise, deployment failures, and system instability. These experiences helped me focus on root cause analysis, better monitoring, and long-term reliability improvements.
+I’ve worked on monitoring setups, CI/CD pipelines, and Kubernetes deployments, where a lot of the work is not just building things, but maintaining them and fixing problems under pressure. That experience helped me become more patient and more focused on root cause analysis instead of quick fixes.
 </p>
 
 <p>
-Outside work, I am a badminton state-level player, which taught me discipline, consistency, and how to stay calm under pressure.
+Outside work, I play badminton at a competitive level, which taught me discipline and consistency — something I carry into my work as well.
 </p>
-</div>
-</section>
 
-<!-- HIGHLIGHTS -->
-<section id="highlights">
-<h2>Key Highlights</h2>
-
-<ul>
-<li>Improved system reliability through better monitoring, alerting, and incident response practices</li>
-<li>Built dashboards that helped identify issues faster during production incidents</li>
-<li>Automated infrastructure and deployment tasks to reduce manual effort</li>
-<li>Worked with Kubernetes and cloud systems to maintain stable production environments</li>
-<li>Focused on root cause analysis instead of temporary fixes during incidents</li>
-</ul>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
 
-<p>
-My experience is mainly focused on SRE, DevOps, cloud infrastructure, production reliability, automation, and monitoring.
-</p>
-
 <ul>
-<li>Improved system reliability by implementing monitoring, alerting, and dashboards</li>
-<li>Built and maintained dashboards using Prometheus and Grafana for better visibility</li>
-<li>Supported Kubernetes deployments and resolved production issues</li>
-<li>Automated infrastructure using Terraform, Ansible, and CloudFormation</li>
-<li>Worked on CI/CD pipelines using Jenkins, GitHub Actions, and GitLab CI</li>
-<li>Supported AWS and Azure cloud environments</li>
-<li>Performed root cause analysis for production incidents</li>
-<li>Collaborated with developers and support teams during releases and troubleshooting</li>
+<li>Worked on production systems where most issues were around alerts, failures, and deployments rather than just building new features</li>
+
+<li>Spent a lot of time debugging logs and metrics to understand why something is failing instead of just restarting services</li>
+
+<li>Set up and used Prometheus and Grafana dashboards to get better visibility into system behavior</li>
+
+<li>Handled Kubernetes issues like pod restarts, configuration problems, and deployment failures across environments</li>
+
+<li>Worked with Terraform and Ansible to reduce repeated manual setup work</li>
+
+<li>Used Jenkins and GitHub Actions pipelines, mostly fixing failures and improving deployment stability</li>
+
+<li>Supported AWS and Azure environments, mainly around monitoring, usage, and production issues</li>
+
+<li>Worked during incidents where things don’t go as expected and figured out fixes step by step</li>
+
 </ul>
+
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
 
-<p><b>Master of Science in Computer Science</b> – Wichita State University, Kansas, USA</p>
-<p><b>Bachelor of Technology in Computer Science and Engineering</b> – JNTUK, India</p>
+<p><b>MS in Computer Science</b> – Wichita State University</p>
+<p><b>B.Tech in CSE</b> – JNTUK, India</p>
+
 </section>
 
 <!-- SKILLS -->
@@ -276,20 +220,13 @@ My experience is mainly focused on SRE, DevOps, cloud infrastructure, production
 <span>Kubernetes</span>
 <span>Docker</span>
 <span>Terraform</span>
-<span>Ansible</span>
-<span>CloudFormation</span>
 <span>CI/CD</span>
-<span>Jenkins</span>
-<span>GitHub Actions</span>
-<span>GitLab CI</span>
 <span>Prometheus</span>
 <span>Grafana</span>
 <span>ELK</span>
-<span>CloudWatch</span>
 <span>Linux</span>
-<span>Incident Management</span>
-<span>Observability</span>
 </div>
+
 </section>
 
 <!-- PROJECTS -->
@@ -298,67 +235,47 @@ My experience is mainly focused on SRE, DevOps, cloud infrastructure, production
 
 <h3>Kubernetes Monitoring & Troubleshooting</h3>
 <ul>
-<li>Monitored Kubernetes pods and services using Prometheus and Grafana</li>
-<li>Debugged pod restart issues using logs, resource usage, and Kubernetes events</li>
-<li>Used kubectl to check pod status, logs, deployments, and service behavior</li>
+<li>Worked on monitoring Kubernetes workloads and checking why pods were restarting or failing</li>
+<li>Used logs and metrics to understand resource issues and configuration problems</li>
+<li>Used kubectl commands to debug real-time issues</li>
 </ul>
 
-<h3>CI/CD Pipeline Automation</h3>
+<h3>CI/CD Pipeline Work</h3>
 <ul>
-<li>Worked on Jenkins and GitHub Actions pipelines for build, test, and deployment workflows</li>
-<li>Automated repeated deployment steps to reduce manual effort and mistakes</li>
-<li>Fixed pipeline failures related to build errors, dependencies, and configuration issues</li>
+<li>Worked with Jenkins and GitHub Actions pipelines where most of the work was fixing build and deployment failures</li>
+<li>Improved pipeline stability by identifying recurring issues</li>
 </ul>
 
-<h3>AWS Infrastructure Automation using Terraform</h3>
+<h3>AWS Infrastructure Work</h3>
 <ul>
-<li>Used Terraform to create and manage AWS resources such as EC2, S3, and supporting infrastructure</li>
-<li>Created reusable infrastructure configurations for different environments</li>
-<li>Reduced repeated manual setup by moving infrastructure changes into code</li>
+<li>Used Terraform to manage AWS resources and avoid repeated manual setup</li>
+<li>Tested changes carefully before applying them</li>
 </ul>
+
 </section>
 
 <!-- RESEARCH -->
 <section id="research">
 <h2>PhD & Research Interest</h2>
 
-<div class="highlight-box">
 <p>
-I’m interested in distributed systems, system reliability, and cloud infrastructure. My long-term goal is to pursue a PhD in this space and study how large-scale systems behave under real-world pressure.
+Over time, while working with production systems, I got interested in how large-scale systems behave when things go wrong — especially failures, recovery, and system stability.
 </p>
 
 <p>
-Areas I want to explore include system failures, fault tolerance, observability, scalability, incident recovery, and cloud-native reliability.
+That’s one of the reasons I’m planning to pursue a PhD in distributed systems and system reliability, to understand these problems more deeply.
 </p>
 
-<p>
-<b>Research Skills:</b> Distributed Systems | System Design | Scalability | Fault Tolerance | Reliability Engineering | Cloud Computing | Observability
-</p>
-</div>
-</section>
-
-<!-- LOOKING FOR -->
-<section>
-<h2>What I'm Looking For</h2>
-
-<p>
-I am currently looking for opportunities in:
-</p>
-
-<ul>
-<li>Site Reliability Engineering</li>
-<li>DevOps / Platform Engineering</li>
-<li>Cloud Infrastructure & Automation</li>
-</ul>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact</h2>
 
-<p><b>Email:</b> <a href="mailto:punugupatinaveena47@gmail.com">punugupatinaveena47@gmail.com</a></p>
-<p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/naveena-punugupati/" target="_blank">linkedin.com/in/naveena-punugupati</a></p>
-<p><b>Location:</b> Texas, USA</p>
+<p>Email: punugupatinaveena47@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/naveena-punugupati</p>
+<p>Location: Texas, USA</p>
+
 </section>
 
 </div>
