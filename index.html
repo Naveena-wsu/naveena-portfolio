@@ -1,258 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveena Punugupati | Portfolio</title>
 
-<title>Naveena Punugupati | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.7;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: white;
-  color: #1f2937;
-  line-height: 1.6;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-/* NAV */
-nav {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 0;
+      border-bottom: 1px solid #e5e7eb;
+      background: #ffffff;
+    }
 
-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #374151;
-  font-weight: bold;
-}
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+    }
 
-nav a:hover {
-  color: #2563eb;
-}
+    .menu a {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #475569;
+      font-weight: 700;
+    }
 
-/* HERO */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 0;
-}
+    .menu a:hover {
+      color: #2563eb;
+    }
 
-.hero-text {
-  max-width: 600px;
-}
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 60px;
+      align-items: center;
+      min-height: 75vh;
+      padding: 70px 0;
+    }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
+    .hero h4 {
+      font-size: 18px;
+      color: #64748b;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
 
-.hero h3 {
-  color: #2563eb;
-  margin-bottom: 15px;
-}
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+      color: #111827;
+    }
 
-.hero p {
-  color: #475569;
-}
+    .hero h1 span {
+      color: #111827;
+    }
 
-.hero img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #2563eb;
-}
+    .headline {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
 
-/* SECTION */
-section {
-  padding: 50px 0;
-  border-top: 1px solid #e5e7eb;
-}
+    .sub-headline {
+      color: #334155;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
 
-h2 {
-  margin-bottom: 20px;
-}
+    .intro {
+      max-width: 680px;
+      font-size: 17px;
+      color: #475569;
+      margin-bottom: 28px;
+    }
 
-/* LIST */
-ul {
-  padding-left: 20px;
-}
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #2563eb;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.20);
+    }
 
-li {
-  margin-bottom: 10px;
-}
+    .button:hover {
+      background: #1d4ed8;
+    }
 
-/* TAGS */
-.tags span {
-  display: inline-block;
-  background: #dbeafe;
-  color: #1e40af;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 15px;
-  font-size: 14px;
-}
+    .photo-wrap {
+      text-align: center;
+    }
 
-/* CONTACT */
-.contact p {
-  margin: 8px 0;
-}
+    .profile-photo {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #dbeafe;
+      outline: 2px solid #2563eb;
+      background: #f1f5f9;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+    }
 
-</style>
+    .photo-caption {
+      margin-top: 16px;
+      color: #475569;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 62px 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+      color: #111827;
+      font-weight: 800;
+    }
+
+    section h2 span,
+    .highlight {
+      color: #2563eb;
+      font-weight: 800;
+    }
+
+    .section-line {
+      width: 55px;
+      height: 3px;
+      background: #2563eb;
+      margin-bottom: 26px;
+    }
+
+    .section-intro {
+      font-size: 17px;
+      color: #64748b;
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .soft-box {
+      background: #f8fbff;
+      border-left: 4px solid #2563eb;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    .content-block {
+      margin-bottom: 32px;
+    }
+
+    .content-block h3 {
+      font-size: 21px;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+
+    .content-block h4 {
+      font-size: 15px;
+      color: #64748b;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #334155;
+    }
+
+    strong {
+      color: #111827;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .skills-grid h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .skills-grid p {
+      color: #475569;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .contact-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-area p {
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .contact-area a {
+      color: #2563eb;
+      font-weight: 800;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      padding: 30px 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 820px) {
+      nav { display: block; }
+      .menu { margin-top: 14px; }
+      .menu a { display: inline-block; margin: 6px 12px 6px 0; }
+      .hero { grid-template-columns: 1fr; gap: 30px; padding: 50px 0; }
+      .hero h1 { font-size: 42px; }
+      .photo-wrap { text-align: left; }
+      .profile-photo { width: 210px; height: 210px; }
+      .skills-grid, .contact-area { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page">
 
-<div class="container">
+    <nav>
+      <div class="logo">Naveena Punugupati</div>
+      <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-<!-- NAV (NO NAME HERE NOW) -->
-<nav>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#research">Research</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <header class="hero" id="home">
+      <div>
+        <h4>Welcome to my portfolio, I am</h4>
+        <h1>Naveena <span>Punugupati</span></h1>
 
-<!-- HERO -->
-<div class="hero">
+        <p class="headline">Site Reliability Engineer / DevOps Engineer</p>
+        <p class="sub-headline">AWS | Azure | Kubernetes | Terraform | CI/CD | Observability | Infrastructure Automation</p>
 
-  <div class="hero-text">
-    <h1>Naveena Punugupati</h1>
+        <p class="intro">
+          I work on reliable cloud systems, production support, monitoring, automation, and deployment pipelines. I enjoy understanding how systems behave in real environments, fixing issues at the root level, and making deployments more stable and easier to operate.
+        </p>
 
-    <h3>Site Reliability Engineer / DevOps Engineer</h3>
+        <a href="#contact" class="button">Contact Me</a>
+      </div>
 
-    <p>
-      AWS | Azure | Kubernetes | Terraform | CI/CD | Observability
-    </p>
+      <div class="photo-wrap">
+        <!-- Upload your photo in GitHub with this exact file name: naveena.jpg -->
+        <img src="./naveena.jpg" alt="Naveena Punugupati" class="profile-photo" />
+        <p class="photo-caption">SRE | DevOps | Cloud | Reliability</p>
+      </div>
+    </header>
 
-    <br>
+    <section id="about">
+      <h2>About <span>Me</span></h2>
+      <div class="section-line"></div>
+      <div class="soft-box">
+        <p>
+          I am a <span class="highlight">Site Reliability Engineer</span> and <span class="highlight">DevOps professional</span> with hands-on experience in cloud infrastructure, Kubernetes deployments, CI/CD pipelines, monitoring, and production support.
+        </p>
+        <br />
+        <p>
+          My work has mostly been around making systems more stable and easier to operate. I have worked through real production challenges like noisy alerts, deployment failures, unclear logs, and environment issues. These situations helped me become more patient, more detail-oriented, and more focused on root cause analysis instead of quick temporary fixes.
+        </p>
+        <br />
+        <p>
+          Outside of work, I am passionate about <span class="highlight">badminton</span> and have played at the <span class="highlight">state level</span>. Sports taught me discipline, consistency, and how to stay calm under pressure.
+        </p>
+      </div>
+    </section>
 
-    <p>
-      I work on cloud systems, production support, monitoring, and automation.
-      I enjoy understanding failures, fixing issues at root level, and making systems reliable.
-    </p>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="section-line"></div>
+      <p class="section-intro">A simple view of my overall work across SRE, DevOps, cloud infrastructure, monitoring, and automation.</p>
+
+      <div class="content-block">
+        <h3>Site Reliability Engineering & DevOps Experience</h3>
+        <h4>Cloud, production reliability, automation, and deployment support</h4>
+        <ul>
+          <li>Worked on improving system reliability by setting up useful monitoring, alerting, and dashboards for production systems.</li>
+          <li>Used <strong>Prometheus</strong>, <strong>Grafana</strong>, <strong>CloudWatch</strong>, and <strong>ELK</strong> to track system health, analyze logs, and understand application behavior.</li>
+          <li>Supported <strong>Kubernetes</strong> deployments across environments and helped troubleshoot pod, configuration, and release issues.</li>
+          <li>Worked on <strong>CI/CD pipelines</strong> using Jenkins, GitHub Actions, and GitLab CI to make deployments smoother and more consistent.</li>
+          <li>Automated infrastructure tasks using <strong>Terraform</strong>, <strong>Ansible</strong>, and CloudFormation to reduce manual effort and improve repeatability.</li>
+          <li>Handled production incidents by reviewing logs, metrics, alerts, and system behavior to identify root causes.</li>
+          <li>Collaborated with developers and support teams during releases, incidents, and troubleshooting sessions.</li>
+          <li>Gained hands-on experience with <strong>AWS</strong> and <strong>Azure</strong> cloud environments, Linux systems, Docker, Kubernetes, monitoring, and automation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="section-line"></div>
+
+      <div class="content-block">
+        <h3>Master of Science in Computer Science</h3>
+        <h4>Wichita State University, Kansas, USA</h4>
+        <p>Relevant interests include information security, IT strategy, machine learning, analytics, distributed systems, reliability, and cloud infrastructure.</p>
+      </div>
+
+      <div class="content-block">
+        <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+        <h4>JNTUK, Kakinada, India</h4>
+        <p>Built my foundation in computer science, programming, databases, and software engineering.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Main <span>Skills</span></h2>
+      <div class="section-line"></div>
+      <p class="section-intro">Technical areas I work with and continue to strengthen.</p>
+
+      <div class="skills-grid">
+        <div>
+          <h3>Cloud & Infrastructure</h3>
+          <p>AWS</p>
+          <p>Azure</p>
+          <p>Terraform</p>
+          <p>CloudFormation</p>
+          <p>Ansible</p>
+        </div>
+
+        <div>
+          <h3>DevOps & Platforms</h3>
+          <p>Kubernetes</p>
+          <p>Docker</p>
+          <p>Jenkins</p>
+          <p>GitHub Actions</p>
+          <p>GitLab CI</p>
+        </div>
+
+        <div>
+          <h3>Reliability & Monitoring</h3>
+          <p>Prometheus</p>
+          <p>Grafana</p>
+          <p>ELK</p>
+          <p>CloudWatch</p>
+          <p>Incident Management</p>
+        </div>
+      </div>
+
+      <div class="tag-list">
+        <span class="tag">SRE</span>
+        <span class="tag">DevOps</span>
+        <span class="tag">Cloud</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Observability</span>
+        <span class="tag">Reliability</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="section-line"></div>
+      <p class="section-intro">Practical projects that reflect the kind of work I enjoy doing in cloud, DevOps, and reliability.</p>
+
+      <div class="content-block">
+        <h3>Kubernetes Monitoring & Troubleshooting</h3>
+        <ul>
+          <li>Monitored Kubernetes pods and services using Prometheus and Grafana.</li>
+          <li>Debugged pod restart issues using logs, resource usage, and Kubernetes events.</li>
+          <li>Used kubectl to check pod status, logs, deployments, and service behavior.</li>
+          <li>Documented common troubleshooting steps to make future support easier.</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>CI/CD Pipeline Automation</h3>
+        <ul>
+          <li>Worked on Jenkins and GitHub Actions pipelines for build, test, and deployment workflows.</li>
+          <li>Automated repeated deployment steps to reduce manual effort and mistakes.</li>
+          <li>Fixed pipeline failures related to build errors, dependencies, and configuration issues.</li>
+          <li>Worked with developers during releases to stabilize deployments.</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>AWS Infrastructure Automation with Terraform</h3>
+        <ul>
+          <li>Used Terraform to create and manage AWS resources such as EC2, S3, and supporting infrastructure.</li>
+          <li>Created reusable infrastructure configurations for different environments.</li>
+          <li>Tested changes carefully before applying them more broadly.</li>
+          <li>Reduced repeated manual setup by moving infrastructure changes into code.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>PhD & <span>Research Interest</span></h2>
+      <div class="section-line"></div>
+      <div class="soft-box">
+        <p>
+          I’m particularly interested in <span class="highlight">distributed systems</span>, <span class="highlight">system reliability</span>, and <span class="highlight">cloud infrastructure</span>. My long-term goal is to pursue a PhD in this space and study how large-scale systems behave under real-world pressure.
+        </p>
+        <br />
+        <p>
+          Areas I want to explore include system failures, fault tolerance, observability, scalability, incident recovery, and how cloud-native systems can be designed to recover better during failures.
+        </p>
+        <br />
+        <p><strong>Skills:</strong> Distributed Systems | System Design | Scalability | Fault Tolerance | Reliability Engineering | Cloud Computing | Observability | Monitoring | CI/CD | Infrastructure Automation</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact <span>Details</span></h2>
+      <div class="section-line"></div>
+      <p class="section-intro">I’m open to SRE, DevOps, cloud infrastructure, and platform engineering opportunities.</p>
+
+      <div class="contact-area">
+        <div>
+          <p><strong>Email:</strong> <a href="mailto:punugupatinaveena47@gmail.com">punugupatinaveena47@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/naveena-punugupati/" target="_blank">linkedin.com/in/naveena-punugupati</a></p>
+          <p><strong>Location:</strong> Texas, USA</p>
+        </div>
+        <div>
+          <a href="#home" class="button">Back to top</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Naveena Punugupati. Built around reliability, cloud, and continuous learning.</p>
+    </footer>
+
   </div>
-
-  <div>
-    <img src="naveena.jpg" alt="Naveena Photo">
-  </div>
-
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-<h2>About Me</h2>
-
-<p>
-I am a Site Reliability Engineer and DevOps professional with hands-on experience in cloud infrastructure, Kubernetes, CI/CD pipelines, and monitoring.
-</p>
-
-<p>
-I have worked on real production issues like alert noise, deployment failures, and system instability, which helped me focus on root cause analysis and reliability.
-</p>
-
-<p>
-Outside work, I am a badminton state-level player, which taught me discipline and consistency.
-</p>
-
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-<h2>Experience</h2>
-
-<ul>
-<li>Improved system reliability using monitoring and alerting</li>
-<li>Built dashboards using Prometheus and Grafana</li>
-<li>Handled Kubernetes deployments and troubleshooting</li>
-<li>Automated infrastructure using Terraform and Ansible</li>
-<li>Worked on CI/CD pipelines using Jenkins and GitHub Actions</li>
-<li>Supported AWS and Azure environments</li>
-<li>Handled production issues and root cause analysis</li>
-</ul>
-
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-<h2>Education</h2>
-
-<p><b>MS in Computer Science</b> – Wichita State University</p>
-<p><b>B.Tech in Computer Science</b> – JNTUK, India</p>
-
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-<h2>Main Skills</h2>
-
-<div class="tags">
-<span>AWS</span>
-<span>Azure</span>
-<span>Kubernetes</span>
-<span>Docker</span>
-<span>Terraform</span>
-<span>CI/CD</span>
-<span>Prometheus</span>
-<span>Grafana</span>
-<span>ELK</span>
-<span>Linux</span>
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-<h2>Projects</h2>
-
-<ul>
-<li>Kubernetes Monitoring & Troubleshooting</li>
-<li>CI/CD Pipeline Automation</li>
-<li>AWS Infrastructure Automation (Terraform)</li>
-</ul>
-
-</section>
-
-<!-- RESEARCH -->
-<section id="research">
-<h2>PhD & Research Interest</h2>
-
-<p>
-Interested in distributed systems, system reliability, and cloud infrastructure.
-</p>
-
-<p>
-Planning to pursue a PhD to understand large-scale system behavior.
-</p>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-<h2>Contact</h2>
-
-<p>Email: punugupatinaveena47@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/naveena-punugupati</p>
-<p>Location: Texas, USA</p>
-
-</section>
-
-</div>
-
 </body>
 </html>
